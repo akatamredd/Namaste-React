@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="App.css">
+    <title>Namaste React</title>
+</head>
+<body>
+<div id = "root_js"></div>
+<div id = "root_react"></div>
+<div id ="root"></div>
 
+<script>
+/*Creating JS element and rendering in root_js*/
+const h1 = document.createElement("h1");
+h1.innerHTML="Using JS";
+const root_js = document.getElementById("root_js");
+root_js.appendChild(h1)
+</script>
+
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+/* Creating react element and rendering in root_react */
+
+const h2 = React.createElement("h2", {}, "Using react")
+const root_react = ReactDOM.createRoot(document.getElementById("root_react"));
+root_react.render(h2)
+
+</script>
+
+<script src="App.js"></script>
+</body>
+</html>
